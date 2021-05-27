@@ -1,0 +1,40 @@
+<html>
+<link rel="stylesheet" href="login.component.css">
+<mat-toolbar>
+  <button mat-button>
+    <mat-icon>home</mat-icon>
+    <span style="text-decoration: none; color: rgb(63, 16, 190); " routerLink=''>Rar edu</span>
+  </button>
+</mat-toolbar>
+<body>
+  <div class="background">
+    <div class="blur">
+      <div class="wrapper">
+        <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <h2 class="form-signin-heading">Sign in <a class="underlineHover" routerLink="/register">Sign up</a></h2>
+          <input type="text" [(ngModel)]="user.email" class="form-control" placeholder="Email Address"
+            formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+          </div>
+          <input type="password" [(ngModel)]="user.password" class="form-control" formControlName="password"
+            placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+            <a routerLink="" class="underlineHover"> Forgot your password?</a>
+          </label>
+          <button [disabled]="loading" class="btn btn-lg btn-primary btn-block">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+

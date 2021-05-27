@@ -1,0 +1,15 @@
+<html>
+  <mat-toolbar color="primary" fxLayoutAlign="space-between">
+  <button mat-button>
+    <mat-icon>home</mat-icon>
+    <span routerLink=''>Rar edu</span>
+  </button>
+  <button *ngIf="auth.loggedIn" mat-icon-button (click)="auth.logout()" routerLink="">
+    <mat-icon>home</mat-icon>
+  </button>
+</mat-toolbar>
+  <button mat-button>
+    <mat-icon>menu</mat-icon>
+    <span routerLink="/quiz">Quiz</span>
+  </button>
+</html>

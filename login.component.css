@@ -1,0 +1,112 @@
+body{
+  margin: 0;
+  align-items: center;
+
+  padding: 10px;
+}
+
+.background {
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.blur {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  height: 100vh;
+}
+
+.form-signin-heading {
+  font-family: Montserrat;
+  color: #92badd;
+  font-weight: 700;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 30px;
+}
+
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type=text] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-signin input[type=password] {
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* FORGOT PASSWORD */
+
+a {
+  color: #92badd;
+  display: inline-block;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+#formFooter {
+  text-align: center;
+}
+
+.underlineHover:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: #56baed;
+  content: "";
+  transition: width 0.2s;
+}
+
+.underlineHover:hover {
+  color: #0d0d0d;
+}
+
+.underlineHover:hover:after {
+  width: 100%;
+}
+
+.container{
+  margin-right: auto ;
+background-color: silver;
+padding: 25px;
+position: fixed;
+left: 42%;
+top: 16%;
+border: 1px solid darkred;
+}
